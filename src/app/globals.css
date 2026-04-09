@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+::selection {
+  background: rgba(232, 52, 26, 0.22);
+}
+
+@layer utilities {
+  .dot-grid {
+    background-image: radial-gradient(rgba(10, 10, 10, 0.04) 1px, transparent 1px);
+    background-size: 18px 18px;
+    background-position: 0 0;
+  }
+}
+
+/* Lightweight markdown styling without extra Tailwind plugins. */
+.prose h2,
+.prose h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.prose h2 {
+  font-size: 2.25rem;
+  line-height: 1;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose h3 {
+  font-size: 1.75rem;
+  line-height: 1.1;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-top: 1rem;
+  color: rgba(10, 10, 10, 0.78);
+}
+
+.prose ul {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+}
+
+.prose li {
+  margin-top: 0.5rem;
+  color: rgba(10, 10, 10, 0.78);
+}
+
+.prose a {
+  text-decoration: underline;
+  text-decoration-color: rgba(10, 10, 10, 0.25);
+  text-underline-offset: 4px;
+}
+
+.prose a:hover {
+  text-decoration-color: rgba(10, 10, 10, 0.6);
+}
+
+.prose code {
+  font-size: 0.9em;
+  padding: 0.15rem 0.3rem;
+  border: 1px solid rgba(10, 10, 10, 0.12);
+  background: #ffffff;
+}
+
+.prose pre {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(10, 10, 10, 0.12);
+  background: #ffffff;
+  overflow: auto;
+}
+
+.prose pre code {
+  border: 0;
+  padding: 0;
+}
+
+@media (pointer: coarse) {
+  .cursor-ui {
+    display: none !important;
+  }
+}
